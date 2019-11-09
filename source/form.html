@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="main-menu  main-menu--opened">
+        <button class="main-menu__toggle" type="button"></button>
+
+        <ul class="main-menu__list">
+          <li class="main-menu__item"><a href="index.html">Главная</a></li>
+          <li class="main-menu__item"><a href="photo.html">Фото и видео</a></li>
+          <li class="main-menu__item  main-menu__item--active"><a>Форма отзыва</a></li>
+          <li class="main-menu__item"><a href="https://htmlacademy.ru" target="_blank">HTML Academy</a></li>
+        </ul>
+      </nav>
+
+      <div class="page-header__wrap  page-header__wrap--transparent">
+        <a class="page-header__logo" href="index.html"></a>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div class="intro__wrap">
+          <div class="intro__content  intro__content--form-page">
+            <h1 class="intro__title  intro__title--form-page">Оставьте свой отзыв</h1>
+            <span class="intro__text  intro__text--form-page">Помогите нашим отелям стать лучше!
+            Оставьте отзыв о них, а также о посещенных вами достопримечательностях</span>
+          </div>
+        </div>
+      </section>
+
+      <form class="review-form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="name-fieldset">
+          <h2 class="name-fieldset__title">Представьтесь:</h2>
+
+          <label class="name-fieldset__item  text-field">
+            <span class="name-fieldset__field-name">Имя*:</span>
+            <span class="name-fieldset__input-wrap">
+              <input class="text-field__input" type="text" name="user_name" placeholder="Петр" pattern="[А-Яа-яЁё \s]+$" title="Только русские буквы" required>
+            </span>
+          </label>
+
+          <label class="name-fieldset__item  text-field">
+            <span class="name-fieldset__field-name">Фамилия*:</span>
+            <span class="name-fieldset__input-wrap">
+              <input class="text-field__input" type="text" name="user_surname" placeholder="Иванов" pattern="[А-Яа-яЁё \s]+$" title="Только русские буквы" required>
+            </span>
+          </label>
+
+          <label class="name-fieldset__item  text-field">
+            <span class="name-fieldset__field-name">Отчество:</span>
+            <span class="name-fieldset__input-wrap">
+              <input class="text-field__input" type="text" name="user_patronym" placeholder="Александрович" pattern="[А-Яа-яЁё \s]+$" title="Только русские буквы">
+            </span>
+          </label>
+        </fieldset>
+
+        <fieldset class="contacts-fieldset">
+          <h2 class="contacts-fieldset__title">Контактная информация:</h2>
+
+          <label class="contacts-fieldset__item  text-field">
+            <span class="contacts-fieldset__field-name  contacts-fieldset__field-name--mobile">Контактный телефон*:</span>
+            <span class="contacts-fieldset__field-name  contacts-fieldset__field-name--desktop">Телефон*:</span>
+            <span class="contacts-fieldset__input-wrap  contacts-fieldset__input-wrap--phone-icon">
+              <input class="text-field__input" type="text" id="zipCode" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Введите телефон" title="+7(888)888-88-88" required>
+            </span>
+          </label>
+
+          <label class="contacts-fieldset__item  text-field">
+            <span class="contacts-fieldset__field-name">Электронная почта*:</span>
+            <span class="contacts-fieldset__input-wrap  contacts-fieldset__input-wrap--email-icon">
+              <input class="text-field__input" type="email" name="user_email" placeholder="Введите e-mail" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="your-mail@domain.ru" required>
+            </span>
+          </label>
+        </fieldset>
+
+        <fieldset class="evaluation-fieldset">
+          <h2 class="evaluation-fieldset__title">Ваше общее впечатление:</h2>
+
+          <div class="evaluation-fieldset__wrap">
+            <label class="radio-field">
+              <input class="radio-field__input" type="radio" id="radio-1" name="user_evaluation_mobile" checked>
+              <span class="radio-field__input-text">Скорее положительное</span>
+            </label>
+          </div>
+
+          <div class="evaluation-fieldset__wrap">
+            <label class="radio-field">
+              <input class="radio-field__input" type="radio" id="radio-2" name="user_evaluation_mobile">
+              <span class="radio-field__input-text">Скорее отрицательное</span>
+            </label>
+          </div>
+
+          <div class="evaluation-fieldset__wrap">
+            <label class="radio-field">
+              <input class="radio-field__input" type="radio" id="radio-3" name="user_evaluation_mobile">
+              <span class="radio-field__input-text">Затрудняюсь ответить</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="places-fieldset">
+          <h2 class="places-fieldset__title">Посещенные достопримечательности:</h2>
+
+          <div class="places-fieldset__wrap">
+            <label class="checkbox-field  places-fieldset__item">
+              <input class="checkbox-field__input" type="checkbox" id="checkbox-1" name="user_places" checked>
+              <span class="checkbox-field__input-text">Мост Дьявола</span>
+            </label>
+
+            <label class="checkbox-field  places-fieldset__item">
+              <input class="checkbox-field__input" type="checkbox" id="checkbox-2" name="user_places" checked>
+              <span class="checkbox-field__input-text">Слайд-парк</span>
+            </label>
+
+            <label class="checkbox-field  places-fieldset__item">
+              <input class="checkbox-field__input" type="checkbox" id="checkbox-3" name="user_places" checked>
+              <span class="checkbox-field__input-text">Гора-Колокол</span>
+            </label>
+
+            <label class="checkbox-field  places-fieldset__item">
+              <input class="checkbox-field__input" type="checkbox" id="checkbox-4" name="user_places">
+              <span class="checkbox-field__input-text">Красные скалы</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="review-fieldset  text-field">
+          <h2 class="review-fieldset__title">Опишите свои эмоции:</h2>
+
+          <div class="review-fieldset__input-wrap">
+            <textarea class="review-fieldset__input  text-field__input" name="user_review" placeholder="Опишите подробно все свои восторги" title="Только русские буквы" required></textarea>
+          </div>
+        </fieldset>
+
+        <div class="review-form__send-button">
+          <input class="button  button--send-form" type="submit" value="Отправить Отзыв" name="review_form_submit">
+          <span class="review-form__text-block"><span>*</span> — обязательные поля</span>
+        </div>
+
+        <div class="popup  popup--success">
+          <div class="popup__text-container">
+            <h2>Ваш отзыв отправлен!</h2>
+
+            <p>Спасибо за ваше участие, ваш отзыв уже поступил к нам.
+              В ближайшее время мы опубликуем его на сайте.</p>
+          </div>
+
+          <div class="popup__button-container">
+            <input class="button  button--popup-close" type="button" value="Закрыть окно">
+          </div>
+        </div>
+
+        <div class="popup  popup--error">
+          <div class="popup__text-container">
+            <h2>Что-то пошло не так!</h2>
+
+            <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+            <input class="button  button--popup-close  button--popup-error" type="button" value="Ok">
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrap  page-footer__wrap--form-page">
+        <a class="page-footer__logo  page-footer__logo--form-page" href="index.html">#visitsedona</a>
+
+        <div class="social-links">
+          <ul class="social-links__list">
+            <li><a class="social-links__item  social-links__item--twitter" href="#twitter" title="twitter">twitter</a></li>
+            <li><a class="social-links__item  social-links__item--facebook" href="#facebook" title="facebook">facebook</a></li>
+            <li><a class="social-links__item  social-links__item--youtube" href="#youtube" title="youtube">youtube</a></li>
+          </ul>
+        </div>
+
+        <a class="developer  developer--form-page" href="https://htmlacademy.ru/" target="_blank">
+          <span class="developer__text">Разработано</span>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

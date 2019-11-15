@@ -1,0 +1,27 @@
+@blue: #81b3d2;
+@grey: #eeeeee;
+@white: #ffffff;
+
+
+.background(@color) {
+  background-color: @color;
+}
+
+.font(@color, @size, @line-height, @weight, @family) {
+  color: @color;
+  font-size: @size;
+  line-height: @line-height;
+  font-weight: @weight;
+  font-family: @family, "Arial", sans-serif;
+}
+.center(){
+  padding: 0;
+  margin: 0 auto;
+}
+.innersize(@left, @right, @top, @bottom){
+  padding-left: @left;
+  padding-right: @right;
+  padding-top: @top;
+  padding-bottom: @bottom;
+}
+

@@ -1,0 +1,73 @@
+.popup--success {
+  width: 320px;
+  height: 323px;
+  text-align: center;
+  display: block;
+  position: fixed;
+  top: 25%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 200;
+  background-color: @white;
+  .center();
+  box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.6);
+}
+
+.popup__text-container {
+  margin-bottom: 31px;
+}
+
+.popup__title {
+  .font(#000, 18px, 26px, 700,"PT Sans");
+  text-transform: uppercase;
+  margin-top: 45px;
+  margin-bottom: 27px;
+}
+
+.popup__text {
+  .font(#000, 14px, 24px, 400,"PT Sans");
+  text-transform: uppercase;
+  width: 240px;
+  display: block;
+  .center();
+}
+
+.popup__button-container {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.button--popup-close {
+  .font(@white, 18px, 26px, 700, "PT Sans");
+  text-transform: uppercase;
+  background-color: @blue;
+  border: none;
+  .center();
+  padding: 16px 80px;
+  display: block;
+}
+
+.popup--error {
+  width: 320px;
+  height: 280px;
+  text-align: center;
+  display: block;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 200;
+  background-color: @white;
+  .center();
+  box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.6);
+}
+
+.button--popup-error {
+  margin-top: 20px;
+}
+
+.popup {
+  display: none;
+}

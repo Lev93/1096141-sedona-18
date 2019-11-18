@@ -1,5 +1,8 @@
-.intro__background {
+.intro {
+  background-color: @white;
+}
 
+.intro__background {
   height: 158px;
   background: url("../img/bg-intro-triangle-mobile.svg") no-repeat 52% bottom,
     url("../img/bg-back-mobile@1x.jpg") no-repeat;
@@ -64,4 +67,57 @@
 .intro__content--form {
   width: 280px;
   margin-bottom: -6px;
+}
+
+@media (min-width: @tablet-width) {
+  .intro {
+    width: 100%;
+    .center();
+  }
+
+  .intro__background {
+    height: 158px;
+    background: url("../img/bg-intro-triangle-tablet.svg") no-repeat bottom,
+      url("../img/bg-back-tablet@1x.jpg") no-repeat;
+    background-position: 50% bottom;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .intro-background--index {
+    height: 518px;
+  }
+
+  .intro__content {
+    .center();
+    text-align: center;
+    width: 100%;
+    padding-bottom: 27px;
+  }
+
+  .intro__title {
+    .font(black, 21px, 26px, bold, "PT Sans");
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 28px;
+  }
+
+  .intro__banner {
+    margin-top: 76px;
+    width: 560px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro {
+    width: @desktop-width;
+  }
+
+  .intro__background {
+    background: url("../img/bg-intro-triangle-desktop.svg") no-repeat bottom,
+      url("../img/bg-back-desktop@1x.jpg") no-repeat;
+  }
 }

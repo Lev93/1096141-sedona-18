@@ -1,16 +1,16 @@
 .page-header{
-  .center;
+
 }
 .main-menu{
   position: relative;
   display: none;
-  .center;
+
 }
 .main-menu--opened{
   display: block;
 }
 .main-menu__list{
-  .center;
+  .center();
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -20,7 +20,7 @@
 
 .main-menu__item{
   .background(@blue);
-  .center;
+
   width: 100%;
   display: flex;
   justify-content: center;
@@ -33,7 +33,7 @@
 
 .main-menu__item a{
   .font(@white, 18px, 18px, bold, PT Sans);
-  .center;
+
   text-decoration: none;
   display: block;
   vertical-align: middle;
@@ -50,7 +50,6 @@
   color: rgba(255, 255, 255, 0.302);
 }
 .page-header__wrap{
-  .center;
   height: 56px;
   margin-top: 0;
   display: flex;
@@ -68,4 +67,6 @@
   cursor: pointer;
   right: 20px;;
 }
-
+.page-header__logo{
+  z-index: 200;
+}

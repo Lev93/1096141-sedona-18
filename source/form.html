@@ -2,12 +2,12 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона. Форма<div class=""></div></title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>HTML Academy: Седона. Форма</title>
     <link rel="stylesheet" href="fonts/ptsans.woff2">
     <link rel="stylesheet" href="fonts/ptsans.woff">
     <link rel="stylesheet" href="fonts/ptsansbold.woff2">
     <link rel="stylesheet" href="fonts/ptsansbold.woff">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
@@ -52,7 +52,7 @@
             </p>
           </label>
 
-          <label class="name_item text-field">
+          <label class="name__item text-field">
             <p class="name__field-name">Фамилия*:</p>
             <p class="name__input-wrap">
               <input class="text-field" type="text" name="user_surname" placeholder="Иванов" pattern="[А-Яа-яЁё \s]+$" title="Только русские буквы" required>
@@ -61,7 +61,7 @@
 
           <label class="name__item text-field">
             <p class="name__field-name">Отчество:</p>
-            <p class="name-__input-wrap">
+            <p class="name__input-wrap">
               <input class="text-field" type="text" name="user_patronym" placeholder="Александрович" pattern="[А-Яа-яЁё \s]+$" title="Только русские буквы">
             </p>
           </label>
@@ -71,17 +71,16 @@
           <h2 class="contacts__title">Контактная информация:</h2>
 
           <label class="contacts__item text-field">
-            <p class="contacts__field-name contacts__field-name--mobile">Контактный телефон*:</p>
-            <p class="contacts-__field-name contacts__field-name--desktop">Телефон*:</p>
-            <p class="contacts__input-wrap contacts-__input-wrap--phone-icon">
-              <input class="text-field" type="text" id="zipCode" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Введите телефон" title="+7(888)888-88-88" required>
+            <p class="contacts__field-name">Контактный телефон*:</p>
+            <p class="contacts__input-wrap contacts__input-wrap--phone">
+              <input class="contacts__text-field" type="text" id="zipCode" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Введите телефон" title="+7(888)888-88-88" required>
             </p>
           </label>
 
           <label class="contacts__item text-field">
             <p class="contacts__field-name">Электронная почта*:</p>
-            <p class="contacts__input-wrap contacts__input-wrap--email-icon">
-              <input class="text-field__input" type="email" name="user_email" placeholder="Введите e-mail" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="your-mail@domain.ru" required>
+            <p class="contacts__input-wrap contacts__input-wrap--email">
+              <input class="contacts__text-field" type="email" name="user_email" placeholder="Введите e-mail" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="your-mail@domain.ru" required>
             </p>
           </label>
         </fieldset>
@@ -90,22 +89,25 @@
           <h2 class="evaluation__title">Ваше общее впечатление:</h2>
 
           <div class="evaluation__wrap">
-            <label class="radio">
-              <input class="radio__input" type="radio" id="radio-1" name="user_evaluation_mobile" checked>
+            <input class="radio__input" type="radio" id="radio-1" name="user_evaluation_mobile" checked>
+            <label class="radio__input-wrap" for="radio-1">
+              <span class="radio__input-radio"></span>
               <p class="radio__input-text">Скорее положительное</p>
             </label>
           </div>
 
           <div class="evaluation__wrap">
-            <label class="radio">
-              <input class="radio__input" type="radio" id="radio-2" name="user_evaluation_mobile">
+            <input class="radio__input" type="radio" id="radio-2" name="user_evaluation_mobile">
+            <label class="radio__input-wrap" for="radio-2">
+              <span class="radio__input-radio"></span>
               <p class="radio__input-text">Скорее отрицательное</p>
             </label>
           </div>
 
           <div class="evaluation__wrap">
-            <label class="radio">
-              <input class="radio__input" type="radio" id="radio-3" name="user_evaluation_mobile">
+            <input class="radio__input" type="radio" id="radio-3" name="user_evaluation_mobile">
+            <label class="radio__input-wrap" for="radio-3">
+              <span class="radio__input-radio"></span>
               <p class="radio__input-text">Затрудняюсь ответить</p>
             </label>
           </div>
@@ -115,63 +117,61 @@
           <h2 class="places__title">Посещенные достопримечательности:</h2>
 
           <div class="places__wrap">
-            <label class="checkbox places__item">
+            <label class="checkbox__places__item">
               <input class="checkbox__input" type="checkbox" id="checkbox-1" name="user_places" checked>
               <p class="checkbox__input-text">Мост Дьявола</p>
             </label>
 
-            <label class="checkbox places__item">
+            <label class="checkbox__places__item">
               <input class="checkbox__input" type="checkbox" id="checkbox-2" name="user_places" checked>
-              <p class="checkbox__input-text">Слайд-парк</p>
-            </label>
-
-            <label class="checkbox places__item">
-              <input class="checkbox__input" type="checkbox" id="checkbox-3" name="user_places" checked>
               <p class="checkbox__input-text">Гора-Колокол</p>
             </label>
 
-            <label class="checkbox places_item">
+            <label class="checkbox__places__item">
+              <input class="checkbox__input" type="checkbox" id="checkbox-3" name="user_places" checked>
+              <p class="checkbox__input-text">Слайд-парк</p>
+            </label>
+
+            <label class="checkbox__places_item">
               <input class="checkbox__input" type="checkbox" id="checkbox-4" name="user_places">
-              <p class="checkbox__input-text">Красные скалы</p>
+              <p class="checkbox__input-text checkbox__input-text--last">Красные скалы</p>
             </label>
           </div>
         </fieldset>
 
-        <fieldset class="review text">
+        <fieldset class="review__text">
           <h2 class="review__title">Опишите свои эмоции:</h2>
 
           <div class="review__input-wrap">
-            <textarea class="review__input text__input" name="user_review" placeholder="Опишите подробно все свои восторги" title="Только русские буквы" required></textarea>
+            <textarea class="review__input" name="user_review" placeholder="Опишите подробно все свои восторги" title="Только русские буквы" required></textarea>
           </div>
         </fieldset>
 
         <div class="review-form__send-button">
           <input class="button  button--send-form" type="submit" value="Отправить Отзыв" name="review_form_submit">
-          <p class="review-form__text-block"><p>*</p> — обязательные поля</p>
-        </div>
-
-        <div class="popup  popup--success">
-          <div class="popup__text-container">
-            <h2>Ваш отзыв отправлен!</h2>
-
-            <p>Спасибо за ваше участие, ваш отзыв уже поступил к нам.
-              В ближайшее время мы опубликуем его на сайте.</p>
-          </div>
-
-          <div class="popup__button-container">
-            <input class="button button--popup-close" type="button" value="Закрыть окно">
-          </div>
-        </div>
-
-        <div class="popup popup--error">
-          <div class="popup__text-container">
-            <h2>Что-то пошло не так!</h2>
-
-            <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-            <input class="button button--popup-close button--popup-error" type="button" value="Ok">
-          </div>
+          <p class="review-form__text-block">* — обязательные поля</p>
         </div>
       </form>
+      <div class="popup  popup--success">
+        <div class="popup__text-container">
+          <h2 class="popup__title">Ваш отзыв отправлен!</h2>
+
+          <p class="popup__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.
+            <br>В ближайшее время мы опубликуем его на сайте.</p>
+        </div>
+
+        <div class="popup__button-container">
+          <input class="button button--popup-close" type="button" value="Закрыть окно">
+        </div>
+      </div>
+
+      <div class="popup popup--error">
+        <div class="popup__text-container">
+          <h2 class="popup__title">Что-то пошло не так!</h2>
+          <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+          <input class="button button--popup-close button--popup-error" type="button" value="Ok">
+        </div>
+      </div>
     </main>
 
     <footer class="page-footer">

@@ -1,4 +1,6 @@
-
+.page-header{
+  background-color: @white;
+}
 .main-menu {
   position: relative;
   display: none;
@@ -72,4 +74,56 @@
 
 .page-header__logo {
   z-index: 200;
+}
+@media (min-width: @tablet-width) {
+  .page-header{
+    width: 100%;
+    .center();
+    display: flex;
+    flex-direction: column;
+  }
+  .main-menu{
+    order: 2;
+  }
+  .main-menu__list {
+    .center();
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    list-style-type: none;
+  }
+  .main-menu__item {
+    .background(@white);
+    width: 20%;
+    display: block;
+    border-bottom: none;
+    border-top: none;
+  }
+  .main-menu__item:nth-last-child(1) {
+    box-shadow: none;
+  }
+  .main-menu__item:nth-child(2) {
+    margin-right: auto;
+  }
+  .main-menu__item a {
+    .font(#000000, 14px, 26px, bold, "PT Sans");
+    vertical-align: middle;
+    .innersize(0, 0, 14px, 16px);
+    flex-grow: 0;
+    text-align: center;
+  }
+  .page-header__wrap {
+    height: 0;
+    order: 1;
+  }
+  .main-menu__toggle{
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header{
+    width: @desktop-width;
+  }
 }

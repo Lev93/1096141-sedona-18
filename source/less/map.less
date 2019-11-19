@@ -1,5 +1,11 @@
 .map {
   .center();
+  background-color: @white;
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    padding-top: 13px;
+  }
 }
 
 .map__wrap {
@@ -8,8 +14,17 @@
 
 .map__content {
   .center();
-  background-image: url("../img/bg-map-mobile@1x.jpg") no-repeat;
+  background-image: url("../img/bg-map-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   height: 350px;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/bg-map-tablet@1x.jpg");
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/bg-map-desktop@1x.jpg");
+  }
 }

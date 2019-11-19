@@ -1,6 +1,16 @@
 .search-form {
-  .center;
   margin-bottom: 65px;
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    .center();
+    height: 318px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
 }
 
 .search-form__wrap {
@@ -12,6 +22,12 @@
   .font(#000,21px, 26px, 700, "PT Sans");
   text-transform: uppercase;
   margin-top: 27px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    margin-top: 0;
+    padding-top: 55px;
+  }
 }
 
 .search-form__text {
@@ -21,6 +37,12 @@
   .center();
   margin-top: 20px;
   margin-bottom: 50px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 31px;
+    width: 400px;
+    margin-bottom: 58px;
+  }
 }
 
 .button--search-form {
@@ -29,4 +51,17 @@
   text-transform: uppercase;
   text-decoration: none;
   .innersize(46px, 46px, 15px, 15px);
+
+  @media (min-width: @tablet-width) {
+    .innersize(136px, 136px, 15px, 15px);
+  }
+}
+
+.button--search-form:hover {
+  background-color: #669ec0;
+}
+
+.button--search-form:active {
+  background-color: #5496bd;
+  color: #88b6d1;
 }

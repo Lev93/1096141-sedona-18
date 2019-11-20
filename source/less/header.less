@@ -130,10 +130,33 @@
   .main-menu__toggle {
     display: none;
   }
+
+  .main-menu__item a:hover {
+    color: @blue;
+    background-color: @white;
+  }
+
+  .main-menu__item a:active {
+    color: @down;
+    background-color: @white;
+  }
+
+  .main-menu__item--active a {
+    color: @active;
+  }
+
+  .main-menu__item--active a:hover {
+    color: @active-hover;
+  }
+
+  .main-menu__item--active a:active {
+    color: @active-active;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
-    width: @desktop-width;
+    width: 1200px;
+    .center();
   }
 }

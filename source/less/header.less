@@ -1,5 +1,6 @@
 .page-header {
   background-color: @white;
+  position: relative;
 }
 
 .page-header__wrap {
@@ -11,6 +12,29 @@
 
 .page-header__logo {
   z-index: 200;
+}
+
+.main-menu__toggle {
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url("../img/icon-cross.svg") no-repeat 50% 50%;
+  background-size: 23px 22px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  right: 20px;
+}
+
+.main-menu__toggle--closed {
+  background: url("../img/icon-menu.svg") no-repeat 50% 50%;
+  background-size: 23px 22px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  right: 20px;
+  bottom: -0px;
 }
 
 @media (min-width: @width-tablet) {

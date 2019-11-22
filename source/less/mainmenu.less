@@ -1,6 +1,9 @@
 .main-menu {
-  position: relative;
   display: none;
+
+  @media (min-width: @width-tablet) {
+    display: block;
+  }
 }
 
 .main-menu--opened {
@@ -47,19 +50,6 @@
 .main-menu__item a:active {
   background-color: #5496bd;
   color: rgba(255, 255, 255, 0.302);
-}
-
-.main-menu__toggle {
-  position: absolute;
-  display: block;
-  width: 60px;
-  height: 60px;
-  background: url("../img/icon-cross.svg") no-repeat 50% 50%;
-  background-size: 23px 22px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  right: 20px;
 }
 
 @media (min-width: @width-tablet) {

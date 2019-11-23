@@ -560,7 +560,7 @@
 .review__input {
   background-color: #f2f2f2;
   border: none;
-  .font(#0000, 18px, 26px, 700, "PT Sans");
+  .font(#000000, 18px, 26px, 700, "PT Sans");
   flex-grow: 1;
   padding-left: 20px;
   padding-right: 20px;
@@ -647,4 +647,18 @@
 .button--send-form:active {
   background-color: #5496bd;
   color: #94b9d2;
+}
+
+.error {
+  outline: 1px solid red;
+}
+
+.error-text,
+.help-message {
+  position: absolute;
+  display: block;
+  text-transform: none;
+  color: red;
+  font-size: 14px;
+  font-weight: 400;
 }

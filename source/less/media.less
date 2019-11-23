@@ -1,7 +1,7 @@
 .media {
   background-color: @white;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-tablet) {
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -13,14 +13,14 @@
 }
 
 .blog {
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-tablet) {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     padding-top: 22px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-tablet) {
     padding-top: 23px;
   }
 
@@ -34,7 +34,7 @@
   box-sizing: border-box;
   border-top: 1px solid #eeeeee;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-tablet) {
     border: none;
     width: 50%;
     margin: 0;
@@ -47,7 +47,7 @@
 }
 
 .blog__post--big {
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-tablet) {
     width: 100%;
   }
 }
@@ -57,15 +57,24 @@
   justify-content: center;
   margin-top: 22px;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-tablet) {
+    display: block;
     margin-top: 0;
-    height: 267px;
+    max-width: none;
   }
 }
 
 .blog__post--big .blog__picture-wrap {
-  @media (min-width: @tablet-width) {
-    height: 400px;
+  @media (min-width: @width-tablet) {
+    display: block;
+  }
+}
+
+.blog__picture__img {
+  @media (min-width: @width-tablet) {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -73,7 +82,7 @@
   .center();
   width: 280px;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-tablet) {
     background-color: #f2f2f2;
     width: 100%;
     display: flex;
@@ -90,9 +99,9 @@
 
 
 .blog__description {
-  margin-top: 16px;
+  margin-top: 12px;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-tablet) {
     margin-top: 0;
   }
 }
@@ -101,7 +110,7 @@
   .font(#000, 14px, 24px, 700, "PT Sans");
   text-transform: uppercase;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-tablet) {
     margin-top: 16px;
     margin-left: 20px;
   }
@@ -116,7 +125,7 @@
   .center();
   margin-top: -12px;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-tablet) {
     margin-top: -11px;
     margin-left: 20px;
   }
@@ -134,7 +143,7 @@
   position: relative;
   margin-bottom: 15px;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-tablet) {
     margin-bottom: 0;
     margin-top: 31px;
     margin-right: 28px;
@@ -142,7 +151,7 @@
 }
 
 .blog__likes-container--big {
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-tablet) {
     margin-right: 19px;
   }
 }
@@ -151,7 +160,7 @@
   .font(#000, 14px, 24px, bold,"PT Sans");
   margin-left: 37px;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-tablet) {
     margin-top: -2px;
     margin-left: 32px;
   }
@@ -164,6 +173,12 @@
 .blog__like-icon-img {
   position: absolute;
   top: -3px;
+
+  @media (min-width: @desktop-width) {
+    path {
+      fill: #ffffff;
+    }
+  }
 }
 
 .video-blog {
@@ -172,7 +187,7 @@
   padding-bottom: 36px;
   background-color: @white;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-tablet) {
     width: 100%;
     padding-top: 28px;
     padding-bottom: 39px;
@@ -188,7 +203,7 @@
   box-sizing: border-box;
   border-top: 1px solid #eeeeee;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-tablet) {
     border-top: none;
   }
 
@@ -202,7 +217,7 @@
   width: 250px;
   text-align: center;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-tablet) {
     width: 420px;
   }
 }
@@ -212,7 +227,7 @@
   text-transform: uppercase;
   margin-top: 35px;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-tablet) {
     font-size: 30px;
     line-height: 30px;
   }
@@ -223,15 +238,16 @@
   text-transform: uppercase;
   margin-top: 26px;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-tablet) {
     margin-top: 29px;
   }
 }
 
 .video-blog__video-wrap {
   margin-top: 33px;
+  position: relative;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-tablet) {
     .center();
     width: 648px;
     height: 499px;
@@ -247,14 +263,14 @@
 }
 
 .control-panel {
-  position: relative;
   background-color: #f2f2f2;
   width: 280px;
   height: 66px;
   .center();
+  position: relative;
   top: -4px;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-tablet) {
     width: 648px;
     height: 93px;
     position: absolute;
@@ -269,8 +285,8 @@
 
 .control-panel__progress-bar {
   position: absolute;
-  top: -45px;
-  left: 0;
+  top: 156px;
+  left: 20px;
   box-sizing: border-box;
   width: 280px;
   height: 45px;
@@ -278,8 +294,8 @@
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
 
-  @media (min-width: @tablet-width) {
-    top: 23px;
+  @media (min-width: @width-tablet) {
+    top: 428px;
     left: 70px;
     background-color: transparent;
     width: 389px;
@@ -292,8 +308,9 @@
   outline: none;
   border: none;
   background-color: transparent;
+  appearance: none;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-tablet) {
     width: 389px;
   }
 
@@ -302,16 +319,17 @@
   }
 }
 
-.range-filter::before {
+.control-panel__progress-bar::before {
   content: "";
   position: absolute;
   background-color: @white;
   top: 22px;
+  left: 22px;
   opacity: 0.2;
   width: 235px;
   height: 3px;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-tablet) {
     width: 389px;
   }
 
@@ -323,46 +341,147 @@
 .control-panel__replay-wrap {
   margin: 0;
   border: none;
-  background-image: url("../img/icon-video-replay.svg");
   background-color: transparent;
-  width: 16px;
-  height: 20px;
-  margin-top: 23px;
-  margin-left: 25px;
+  width: 30px;
+  height: 25px;
+  margin-top: 21px;
+  margin-left: 19px;
+  cursor: pointer;
 
-  @media (min-width: @tablet-width) {
-    margin-top: 35px;
-    margin-left: 35px;
+  @media (min-width: @width-tablet) {
+    margin-top: 33px;
+    margin-left: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 27px;
+  }
+}
+
+.control-panel__replay {
+  @media (min-width: @width-tablet) {
+    path {
+      fill: #ffffff;
+    }
+  }
+}
+
+.control-panel__replay:hover {
+  path {
+    fill: #333333;
+  }
+
+  @media (min-width: @width-tablet) {
+    path {
+      fill: #c2c2c2;
+    }
+  }
+}
+
+.control-panel__replay:active {
+  path {
+    fill: #b8b8b8;
+  }
+
+  @media (min-width: @width-tablet) {
+    path {
+      fill: #949494;
+    }
   }
 }
 
 .control-panel__subtitles-wrap {
   margin: 0;
   border: none;
-  background-image: url("../img/icon-video-subtitles.svg");
   background-color: transparent;
   width: 32px;
-  height: 20px;
+  height: 25px;
   margin-top: 23px;
-  margin-left: 132px;
+  margin-left: 115px;
+  cursor: pointer;
 
-  @media (min-width: @tablet-width) {
-    margin-top: 36px;
-    margin-left: 473px;
+  @media (min-width: @width-tablet) {
+    margin-top: 35px;
+    margin-left: 455px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 623px;
+    margin-left: 608px;
+    margin-top: 36px;
+  }
+}
+
+.control-panel__subtitles {
+  @media (min-width: @width-tablet) {
+    path {
+      fill: #ffffff;
+    }
+  }
+}
+
+.control-panel__subtitles:hover {
+  path {
+    fill: #333333;
+  }
+
+  @media (min-width: @width-tablet) {
+    path {
+      fill: #c2c2c2;
+    }
+  }
+}
+
+.control-panel__subtitles:active {
+  path {
+    fill: #b8b8b8;
+  }
+
+  @media (min-width: @width-tablet) {
+    path {
+      fill: #949494;
+    }
   }
 }
 
 .control-panel__full-srceen-wrap {
   margin: 0;
   border: none;
-  background-image: url("../img/icon-video-fullscreen.svg");
   background-color: transparent;
   width: 20px;
   height: 20px;
   margin-top: 23px;
-  margin-left: 32px;
+  margin-left: 28px;
+  cursor: pointer;
+}
+
+.control-panel__full-srceen {
+  @media (min-width: @width-tablet) {
+    g {
+      fill: #ffffff;
+    }
+  }
+}
+
+.control-panel__full-srceen:hover {
+  g {
+    fill: #333333;
+  }
+
+  @media (min-width: @width-tablet) {
+    g {
+      fill: #c2c2c2;
+    }
+  }
+}
+
+.control-panel__full-srceen:active {
+  g {
+    fill: #b8b8b8;
+  }
+
+  @media (min-width: @width-tablet) {
+    g {
+      fill: #949494;
+    }
+  }
 }

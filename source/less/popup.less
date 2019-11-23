@@ -2,7 +2,6 @@
   width: 320px;
   height: 323px;
   text-align: center;
-  display: block;
   position: fixed;
   top: 25%;
   right: 0;
@@ -12,6 +11,12 @@
   background-color: @white;
   .center();
   box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.6);
+  display: none;
+
+  @media (min-width: @width-tablet) {
+    width: 640px;
+    height: 347px;
+  }
 }
 
 .popup__text-container {
@@ -23,6 +28,22 @@
   text-transform: uppercase;
   margin-top: 45px;
   margin-bottom: 27px;
+
+  @media (min-width: @width-tablet) {
+    font-size: 30px;
+    line-height: 40px;
+    width: 250px;
+    .center();
+    margin-top: 54px;
+    margin-bottom: 24px;
+  }
+}
+
+.popup__title--success {
+  @media (min-width: @width-tablet) {
+    width: 400px;
+    margin-top: 57px;
+  }
 }
 
 .popup__text {
@@ -31,11 +52,26 @@
   width: 240px;
   display: block;
   .center();
+
+  @media (min-width: @width-tablet) {
+    width: 300px;
+    margin-bottom: 32px;
+  }
+}
+
+.popup__text--success {
+  @media (min-width: @width-tablet) {
+    width: 600px;
+  }
 }
 
 .popup__button-container {
   background-color: #f2f2f2;
   padding: 20px;
+
+  @media (min-width: @width-tablet) {
+    padding: 45px;
+  }
 }
 
 .button--popup-close {
@@ -44,15 +80,27 @@
   background-color: @blue;
   border: none;
   .center();
-  padding: 16px 80px;
+  padding: 16px 125px;
   display: block;
+
+  @media (min-width: @width-tablet) {
+    padding: 16px 165px;
+  }
+}
+
+.button--popup-close:hover {
+  background-color: #669ec0;
+}
+
+.button--popup-close:active {
+  background-color: #5496bd;
+  color: #88b6d1;
 }
 
 .popup--error {
   width: 320px;
   height: 280px;
   text-align: center;
-  display: block;
   position: fixed;
   top: 50%;
   right: 0;
@@ -62,12 +110,18 @@
   background-color: @white;
   .center();
   box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.6);
+  display: none;
+
+  @media (min-width: @width-tablet) {
+    width: 400px;
+    height: 347px;
+  }
 }
 
 .button--popup-error {
   margin-top: 20px;
-}
 
-.popup {
-  display: none;
+  @media (min-width: @width-tablet) {
+    padding: 16px 125px;
+  }
 }

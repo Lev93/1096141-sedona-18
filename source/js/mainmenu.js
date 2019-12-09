@@ -25,4 +25,3 @@ closePopup.addEventListener("click", function (evt2) {
   evt2.preventDefault();
   popupSuccess.classList.remove("modal-show");
 });
-

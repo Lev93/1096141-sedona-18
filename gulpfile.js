@@ -15,7 +15,7 @@ var imagemin = require('gulp-imagemin');
 var del = require('del');
 var posthtml = require('gulp-posthtml');
 var include = require('posthtml-include');
-const htmlmin = require('gulp-htmlmin');
+var htmlmin = require('gulp-htmlmin');
 var uglify = require('gulp-uglify');
 var pipeline = require('readable-stream').pipeline;
 

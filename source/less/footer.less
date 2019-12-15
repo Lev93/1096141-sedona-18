@@ -51,8 +51,10 @@
   background-color: @blue;
   width: 46px;
   height: 48px;
-  display: block;
   margin-right: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .social__item:hover {
@@ -63,34 +65,12 @@
   background-color: #5496bd;
 }
 
-.social__item--twitter {
-  background-image: url("../img/icon-twitter.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.social__item__icon {
+  fill: #ffffff;
 }
 
-.social__item--twitter:active {
-  background-image: url("../img/icon-twitter-active.svg");
-}
-
-.social__item--facebook {
-  background-image: url("../img/icon-facebook.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.social__item--facebook:active {
-  background-image: url("../img/icon-facebook-active.svg");
-}
-
-.social__item--youtube {
-  background-image: url("../img/icon-youtube.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.social__item--youtube:active {
-  background-image: url("../img/icon-youtube-active.svg");
+.social__item:active .social__item__icon {
+  fill: #88b6d1;
 }
 
 .developer {
@@ -119,7 +99,7 @@
   background-image: url("../img/logo-htmlacademy.svg");
   background-repeat: no-repeat;
   width: 30px;
-  height: 30px;
+  height: 34px;
   right: -02px;
   top: -3px;
 }

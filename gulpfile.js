@@ -15,7 +15,7 @@ var imagemin = require('gulp-imagemin');
 var del = require('del');
 var posthtml = require('gulp-posthtml');
 var include = require('posthtml-include');
-var htmlmin = require('gulp-htmlmin');
+const htmlmin = require('gulp-htmlmin');
 var uglify = require('gulp-uglify');
 var pipeline = require('readable-stream').pipeline;
 
@@ -73,6 +73,7 @@ gulp.task("sprite", function () {
 gulp.task("images", function () {
   return gulp.src("source/img/**/*.{jpg,svg}")
       .pipe(imagemin([
+        imagemin.optipng({optimizationLevel: 3}),
         imagemin.jpegtran({progressive: true}),
       ]))
       .pipe(gulp.dest("build/img"));

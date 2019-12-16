@@ -242,24 +242,17 @@
   width: 100%;
 }
 
-.contacts__input-wrap--phone::after {
+.contacts__icon {
   content: "";
   position: absolute;
-  background: #e6e6e6 url("../img/icon-phone.svg") no-repeat center;
   width: 58px;
   height: 58px;
+  background-color: #e6e6e6;
   top: 0;
   right: 0;
-}
-
-.contacts__input-wrap--email::after {
-  content: "";
-  position: absolute;
-  background: #e6e6e6 url("../img/icon-mail.svg") no-repeat center;
-  width: 58px;
-  height: 58px;
-  top: 0;
-  right: 0;
+  padding-left: 20px;
+  padding-top: 20px;
+  box-sizing: border-box;
 }
 
 .contacts__input-wrap:hover {
@@ -483,7 +476,7 @@
   display: block;
   width: 56px;
   height: 56px;
-  background: #f2f2f2 url("../img/icon-tick.svg") no-repeat center;
+  background: #f2f2f2 url("../img/tick.svg") no-repeat center;
   border: none;
   border-radius: 5px;
 }

@@ -45,5 +45,15 @@ sendForm.addEventListener("click", function (evt) {
 
 closePopup.addEventListener("click", function (evt) {
   evt.preventDefault();
+
   popupSuccess.classList.add("popup--closed");
 });
+
+  for (var i = 0; i < closePopup.length; i++) {
+    closePopup[i].addEventListener('click', function(evt) {
+      evt.preventDefault();
+      hideCover();
+      popupError.classList.remove('popup--show');
+      popupSuccess.classList.remove('popup--show');
+    });
+};

@@ -55,5 +55,4 @@ closePopup.addEventListener("click", function (evt) {
       popupError.classList.remove('popup--show');
       popupSuccess.classList.remove('popup--show');
     });
-  };
-}());
+};

@@ -13,7 +13,6 @@ button.addEventListener("click", function (e) {
 });
 
 document.addEventListener("DOMContentLoaded", function(event) {
-
   var mapEl = document.querySelector("#map");
 
   if (mapEl) {
@@ -43,7 +42,6 @@ sendForm.addEventListener("click", function (evt) {
   evt.preventDefault();
   popupSuccess.classList.remove("popup--closed");
 });
-
 
 closePopup.addEventListener("click", function (evt) {
   evt.preventDefault();

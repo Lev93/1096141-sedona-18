@@ -13,7 +13,7 @@ button.addEventListener("click", function (e) {
 });
 
 document.addEventListener("DOMContentLoaded", function(event) {
-  var mapEl = document.querySelector('#map');
+  var mapEl = document.querySelector("#map");
 
   if (mapEl) {
     ymaps.ready(init); // активируем карту после загрузки страницы
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 });
 
-var sendForm = document.querySelector("button--send-form");
+var sendForm = document.querySelector(".button--send-form");
 var popupSuccess = document.querySelector(".popup--success");
 var closePopup = document.querySelector(".button--popup-close");
 
@@ -43,7 +43,7 @@ sendForm.addEventListener("click", function (evt) {
   popupSuccess.classList.remove("popup--closed");
 });
 
-closePopup.addEventListener("click", function (evt2) {
-  evt2.preventDefault();
+closePopup.addEventListener("click", function (evt) {
+  evt.preventDefault();
   popupSuccess.classList.add("popup--closed");
 });

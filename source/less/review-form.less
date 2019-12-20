@@ -109,6 +109,7 @@
   background-color: transparent;
   height: 58px;
   text-transform: none;
+  width: 100%;
 
   @media (min-width: @width-tablet) {
     margin-top: -2px;
@@ -129,12 +130,13 @@
 }
 
 .contacts {
-  margin-bottom: 29px;
+  margin-bottom: 19px;
 
   @media (min-width: @width-tablet) {
     order: 3;
     width: 100%;
     margin-top: 58px;
+    margin-bottom: 27px;
   }
 
   @media (min-width: @desktop-width) {
@@ -171,14 +173,14 @@
   margin: 0;
 
   @media (min-width: @width-tablet) {
-    margin-bottom: 100px;
+    margin-top: 11px;
   }
 
   @media (min-width: @desktop-width) {
     width: 50%;
     display: flex;
-    margin-top: 61px;
-    margin-bottom: 0;
+    margin-top: 52px;
+    margin-bottom: 3px;
   }
 }
 
@@ -199,7 +201,7 @@
   @media (min-width: @desktop-width) {
     margin: 0;
     width: 85px;
-    margin-top: 17px;
+    margin-top: 25px;
   }
 }
 
@@ -221,9 +223,12 @@
   margin-left: 20px;
   margin-right: 20px;
   position: relative;
+  margin-top: 8px;
+  margin-bottom: 10px;
 
   @media (min-width: @width-tablet) {
     margin: 0;
+    margin-top: 7px;
     margin-bottom: 23px;
   }
 
@@ -267,7 +272,7 @@
 .evaluation {
   border: none;
   border-top: 1px solid #e6e6e6;
-  margin-bottom: 13px;
+  margin-bottom: 4px;
 
   @media (min-width: @width-tablet) {
     order: 1;
@@ -308,9 +313,11 @@
   margin: 0;
   padding: 0;
   margin-top: 7px;
+  position: relative;
+  margin-bottom: 28px;
 
   @media (min-width: @width-tablet) {
-    margin-bottom: 21px;
+    margin-bottom: 38px;
   }
 
   @media (min-width: @desktop-width) {
@@ -322,57 +329,53 @@
   display: none;
 }
 
-.radio__input-text {
-  .font(#000, 18px, 26px, 700, "PT Sans");
-  margin-left: 25px;
-
-  @media (min-width: @width-tablet) {
-    margin-top: 13px;
-    margin-left: 18px;
-  }
-}
-
 .radio__input-wrap {
   position: relative;
   display: flex;
   justify-content: flex-start;
   margin: 0;
+  cursor: pointer;
 }
 
-.radio__input-radio {
-  background: #f2f2f2;
-  display: block;
-  width: 57px;
-  height: 57px;
-  border: none;
-  border-radius: 50%;
-  position: relative;
-}
-
-.radio__input:checked + .radio__input-wrap .radio__input-radio::before {
+.radio__input-wrap::before {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 22px;
-  height: 22px;
-  margin: auto;
+  display: block;
+  background-color: #f2f2f2;
+  width: 57px;
+  height: 57px;
   border-radius: 50%;
-  background-color: #000000;
-  z-index: 100;
+  cursor: pointer;
+  border: none;
 }
 
-.radio__input-radio:hover {
+.radio__input-text {
+  .font(#000, 18px, 26px, 700, "PT Sans");
+  margin-left: 100px;
+  margin-top: 16px;
+
+  @media (min-width: @width-tablet) {
+    margin-top: 13px;
+    margin-left: 75px;
+  }
+}
+
+.radio__input:checked + .radio__input-wrap::before {
+  background-color: #000000;
+  width: 21px;
+  height: 21px;
+  border: 18px solid #f2f2f2;
+}
+
+.radio__input-wrap:hover::before {
   background-color: @radio-hover;
 }
 
-.radio__input-radio:active {
+.radio__input-wrap:active::before {
   background-color: @radio-active;
 }
 
-.radio__input:checked + .radio__input-wrap .radio__input-radio:active::before {
+.radio__input:checked + .radio__input-wrap:active::before {
   background-color: #a4a4a4;
 }
 
@@ -381,11 +384,13 @@
   border-top: 1px solid #e6e6e6;
   width: 280px;
   .center();
+  margin-bottom: 40px;
 
   @media (min-width: @width-tablet) {
     order: 4;
     width: 100%;
     margin-top: 28px;
+    margin-bottom: 10px;
   }
 
   @media (min-width: @desktop-width) {
@@ -428,14 +433,26 @@
 }
 
 .checkbox__places__item {
+  margin-top: 29px;
+  margin-bottom: 54px;
+
   @media (min-width: @width-tablet) {
     width: 47%;
     padding: 0;
     margin: 0;
+    margin-top: 29px;
+    margin-bottom: 32px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 25%;
+    width: 20%;
+    margin-right: 60px;
+  }
+}
+
+.checkbox__places__item:last-child {
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
   }
 }
 
@@ -447,7 +464,7 @@
   margin-bottom: 54px;
 
   @media (min-width: @width-tablet) {
-    margin-bottom: 32px;
+    margin-bottom: 0;
   }
 }
 
@@ -466,6 +483,7 @@
   background-color: #f2f2f2;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .checkbox__input:checked + .checkbox__input-text::before {

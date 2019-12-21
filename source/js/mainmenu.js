@@ -1,6 +1,8 @@
 var mainMenu = document.querySelector(".main-menu");
 var button = document.querySelector(".main-menu__toggle");
 
+mainMenu.classList.remove('main-menu--nojs');
+
 button.addEventListener("click", function (e) {
   e.preventDefault();
   if (mainMenu.classList.contains('main-menu--opened')) {

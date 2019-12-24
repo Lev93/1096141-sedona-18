@@ -5,15 +5,15 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <title>HTML Academy: Седона. Главная</title>
     <link rel="preload" href="fonts/ptsans.woff2" as="font">
-    <link rel="preload" href="fonts/ptsans.woff" as="font">
+    <link rel="stylesheet" href="fonts/ptsans.woff">
     <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
-    <link rel="preload" href="fonts/ptsansbold.woff" as="font">
+    <link rel="stylesheet" href="fonts/ptsansbold.woff">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
 
     <header class="page-header">
-      <button class="main-menu__toggle main-menu__toggle--closed" type="button"></button>
+      <button class="page-header__toggle page-header__toggle--closed" type="button"></button>
       <nav class="main-menu main-menu--nojs">
         <ul class="main-menu__list">
           <li class="main-menu__item main-menu__item--active"><a>Главная</a></li>
@@ -36,7 +36,7 @@
 
     <main>
       <section class="intro intro--index">
-        <div class="intro__background intro-background--index">
+        <div class="intro__background intro__background--index">
           <img class="intro__banner" alt="Седона" src="img/text-sedona-index.svg" width="460" height="350">
         </div>
         <div class="intro__content intro__content--index">
@@ -129,7 +129,7 @@
         <div class="search-form__wrap">
           <h2 class="search-form__title">Заинтересовались?</h2>
           <p class="search-form__text" >Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <a href="#hotels_search" class="button--search-form">Найти гостиницу</a>
+          <a href="#hotels_search" class="search-form__button">Найти гостиницу</a>
         </div>
       </section>
 
@@ -163,11 +163,12 @@
         </ul>
       </div>
 
-      <a class="developer" href="https://htmlacademy.ru/" target="_blank">
+      <a class="developer" href="https://up.htmlacademy.ru/adaptive/18/" target="_blank">
         <p class="developer__text">Разработано</p>
       </a>
 
     </footer>
+    <script src="js/picturefill.js" async></script>
     <script src="js/mainmenu.js"></script>
   </body>
 </html>

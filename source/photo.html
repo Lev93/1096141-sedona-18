@@ -5,15 +5,15 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <title>HTML Academy: Седона. Фото.</title>
     <link rel="preload" href="fonts/ptsans.woff2" as="font">
-    <link rel="preload" href="fonts/ptsans.woff" as="font">
+    <link rel="stylesheet" href="fonts/ptsans.woff">
     <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
-    <link rel="preload" href="fonts/ptsansbold.woff" as="font">
+    <link rel="stylesheet" href="fonts/ptsansbold.woff">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
 
     <header class="page-header">
-      <button class="main-menu__toggle main-menu__toggle--closed" type="button"></button>
+      <button class="page-header__toggle page-header__toggle--closed" type="button"></button>
       <nav class="main-menu main-menu--nojs">
         <ul class="main-menu__list">
           <li class="main-menu__item"><a href="index.html">Главная</a></li>
@@ -36,7 +36,7 @@
 
     <main>
       <section class="intro">
-        <div class="intro__background intro-background--photo">
+        <div class="intro__background intro__background--photo">
           <img class="intro__banner__other" alt="Седона" src="img/text-sedona.svg" width="460" height="80">
         </div>
         <div class="intro__content intro__content--photo">
@@ -189,7 +189,7 @@
                   <svg class="control-panel__full-srceen" width="20" height="20"><use xlink:href="img/sprite.svg#icon-video-fullscreen"></use></svg>
                 </button>
               </div>
-              <div class="control-panel__progress-bar">
+              <div class="progress-bar">
                 <input class="range-filter" type="range" id="range-filter-1" name="range-filter" value="16">
               </div>
             </div>
@@ -221,11 +221,12 @@
           </ul>
         </div>
 
-      <a class="developer" href="https://htmlacademy.ru/" target="_blank">
+      <a class="developer" href="https://up.htmlacademy.ru/adaptive/18/" target="_blank">
         <p class="developer__text">Разработано</p>
       </a>
 
     </footer>
+    <script src="js/picturefill.js" async></script>
     <script src="js/mainmenu.js"></script>
   </body>
 </html>

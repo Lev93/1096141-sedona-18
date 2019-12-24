@@ -5,14 +5,14 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <title>HTML Academy: Седона. Форма</title>
     <link rel="preload" href="fonts/ptsans.woff2" as="font">
-    <link rel="preload" href="fonts/ptsans.woff" as="font">
+    <link rel="stylesheet" href="fonts/ptsans.woff">
     <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
-    <link rel="preload" href="fonts/ptsansbold.woff" as="font">
+    <link rel="stylesheet" href="fonts/ptsansbold.woff">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <header class="page-header">
-      <button class="main-menu__toggle main-menu__toggle--closed" type="button"></button>
+      <button class="page-header__toggle page-header__toggle--closed page-header__toggle--no-js " type="button"></button>
       <nav class="main-menu main-menu--nojs">
         <ul class="main-menu__list">
           <li class="main-menu__item"><a href="index.html">Главная</a></li>
@@ -35,7 +35,7 @@
 
     <main>
       <section class="intro">
-          <div class="intro__background intro-background--form">
+          <div class="intro__background intro__background--form">
               <img class="intro__banner__other" src="img/text-sedona.svg" alt="Sedona" width="460" height="80">
           </div>
           <div class="intro__content intro__content--form">
@@ -75,7 +75,7 @@
           <h2 class="contacts__title">Контактная информация:</h2>
           <div class="contacts__wrapper">
             <div class="contacts__item">
-              <label class="contacts__field-name" for="zipCode"><span class="contacts__field-name--hidden">Контактный</span> телефон*:</label>
+              <label class="contacts__field-name" for="zipCode"><span class="contacts__field-name__hidden">Контактный</span> телефон*:</label>
               <p class="contacts__input-wrap contacts__input-wrap--phone">
                 <input class="contacts__text-field" type="text" id="zipCode" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Введите телефон" title="+7(888)888-88-88" required>
                 <svg class="contacts__icon" width="18" height="18"><use xlink:href="img/sprite.svg#icon-phone"></use></svg>
@@ -96,23 +96,23 @@
           <h2 class="evaluation__title">Ваше общее впечатление:</h2>
 
           <div class="evaluation__wrap">
-            <input class="radio__input" type="radio" id="radio-1" name="user_evaluation_mobile" checked>
-            <label class="radio__input-wrap" for="radio-1">
-              <span class="radio__input-text">Скорее положительное</span>
+            <input class="evaluation__input visually-hidden" type="radio" id="radio-1" name="user_evaluation_mobile" checked>
+            <label class="evaluation__input-wrap" for="radio-1">
+              <span class="evaluation__input-text">Скорее положительное</span>
             </label>
           </div>
 
           <div class="evaluation__wrap">
-            <input class="radio__input" type="radio" id="radio-2" name="user_evaluation_mobile">
-            <label class="radio__input-wrap" for="radio-2">
-              <span class="radio__input-text">Скорее отрицательное</span>
+            <input class="evaluation__input visually-hidden" type="radio" id="radio-2" name="user_evaluation_mobile">
+            <label class="evaluation__input-wrap" for="radio-2">
+              <span class="evaluation__input-text">Скорее отрицательное</span>
             </label>
           </div>
 
           <div class="evaluation__wrap">
-            <input class="radio__input" type="radio" id="radio-3" name="user_evaluation_mobile">
-            <label class="radio__input-wrap" for="radio-3">
-              <span class="radio__input-text">Затрудняюсь ответить</span>
+            <input class="evaluation__input visually-hidden" type="radio" id="radio-3" name="user_evaluation_mobile">
+            <label class="evaluation__input-wrap" for="radio-3">
+              <span class="evaluation__input-text">Затрудняюсь ответить</span>
             </label>
           </div>
         </fieldset>
@@ -121,29 +121,29 @@
           <h2 class="places__title">Посещенные достопримечательности:</h2>
 
           <div class="places__wrap">
-            <div class="checkbox__places__item">
-              <input class="checkbox__input" type="checkbox" id="checkbox-1" name="user_places" checked>
-              <label class="checkbox__input-text" for="checkbox-1">Мост Дьявола</label>
+            <div class="places__item">
+              <input class="places__input visually-hidden" type="checkbox" id="checkbox-1" name="user_places" checked>
+              <label class="places__input-text" for="checkbox-1">Мост Дьявола</label>
             </div>
 
-            <div class="checkbox__places__item">
-              <input class="checkbox__input" type="checkbox" id="checkbox-2" name="user_places" checked>
-              <label class="checkbox__input-text" for="checkbox-2">Гора-Колокол</label>
+            <div class="places__item">
+              <input class="places__input visually-hidden" type="checkbox" id="checkbox-2" name="user_places" checked>
+              <label class="places__input-text" for="checkbox-2">Гора-Колокол</label>
             </div>
 
-            <div class="checkbox__places__item">
-              <input class="checkbox__input" type="checkbox" id="checkbox-3" name="user_places" checked>
-              <label class="checkbox__input-text" for="checkbox-3">Слайд-парк</label>
+            <div class="places__item">
+              <input class="places__input visually-hidden" type="checkbox" id="checkbox-3" name="user_places" checked>
+              <label class="places__input-text" for="checkbox-3">Слайд-парк</label>
             </div>
 
-            <div class="checkbox__places__item">
-              <input class="checkbox__input" type="checkbox" id="checkbox-4" name="user_places">
-              <label class="checkbox__input-text checkbox__input-text--last" for="checkbox-4">Красные скалы</label>
+            <div class="places__item">
+              <input class="places__input visually-hidden" type="checkbox" id="checkbox-4" name="user_places">
+              <label class="places__input-text places__input-text--last" for="checkbox-4">Красные скалы</label>
             </div>
           </div>
         </fieldset>
 
-        <fieldset class="review__text">
+        <fieldset class="review">
           <h2 class="review__title">Опишите свои эмоции:</h2>
 
           <div class="review__input-wrap">
@@ -201,11 +201,12 @@
           </ul>
         </div>
 
-      <a class="developer" href="https://htmlacademy.ru/" target="_blank">
+      <a class="developer" href="https://up.htmlacademy.ru/adaptive/18/" target="_blank">
         <p class="developer__text">Разработано</p>
       </a>
 
     </footer>
+    <script src="js/picturefill.js" async></script>
     <script src="js/mainmenu.js"></script>
   </body>
 </html>

@@ -10,6 +10,15 @@
   background-size: cover;
   display: flex;
   justify-content: center;
+
+  @media (min-resolution: @retina-dppx) {
+    background: url("../img/bg-intro-triangle-mobile.svg") no-repeat 52% bottom,
+      url("../img/bg-back-mobile@2x.jpg") no-repeat;
+    background-position: 50% bottom;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .intro__banner {
@@ -22,11 +31,11 @@
   width: 230px;
 }
 
-.intro-background--index {
+.intro__background--index {
   height: 389px;
 }
 
-.intro-background--photo {
+.intro__background--photo {
   height: 157px;
 }
 
@@ -91,12 +100,12 @@
     }
   }
 
-  .intro-background--index {
+  .intro__background--index {
     height: 518px;
   }
 
-  .intro-background--photo,
-  .intro-background--form {
+  .intro__background--photo,
+  .intro__background--form {
     height: 290px;
   }
 
@@ -161,8 +170,8 @@
     }
   }
 
-  .intro-background--photo,
-  .intro-background--form {
+  .intro__background--photo,
+  .intro__background--form {
     height: 300px;
   }
 

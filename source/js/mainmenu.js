@@ -1,16 +1,17 @@
 var mainMenu = document.querySelector(".main-menu");
-var button = document.querySelector(".main-menu__toggle");
+var button = document.querySelector(".page-header__toggle");
 
 mainMenu.classList.remove('main-menu--nojs');
+button.classList.remove('page-header__toggle--no-js');
 
 button.addEventListener("click", function (e) {
   e.preventDefault();
   if (mainMenu.classList.contains('main-menu--opened')) {
   mainMenu.classList.remove("main-menu--opened");
-  button.classList.add("main-menu__toggle--closed");
+  button.classList.add("page-header__toggle--closed");
   }else {
     mainMenu.classList.add("main-menu--opened");
-    button.classList.remove("main-menu__toggle--closed");
+    button.classList.remove("page-header__toggle--closed");
   };
 });
 
@@ -41,7 +42,6 @@ var popupSuccess = document.querySelector(".popup--success");
 var closePopup = document.querySelector(".button--popup-close");
 
 sendForm.addEventListener("click", function (evt) {
-  evt.preventDefault();
   popupSuccess.classList.remove("popup--closed");
 });
 

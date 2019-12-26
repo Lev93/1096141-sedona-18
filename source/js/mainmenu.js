@@ -41,13 +41,13 @@ var sendForm = document.querySelector(".button--send-form");
 var popupSuccess = document.querySelector(".popup--success");
 var closePopup = document.querySelector(".button--popup-close");
 
-sendForm.addEventListener("click", function (evt) {
+sendForm.addEventListener("submit", function (evt) {
+  evt.preventDefault();
   popupSuccess.classList.remove("popup--closed");
 });
 
 closePopup.addEventListener("click", function (evt) {
   evt.preventDefault();
-
   popupSuccess.classList.add("popup--closed");
 });
 
